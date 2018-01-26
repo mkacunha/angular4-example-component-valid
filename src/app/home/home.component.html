@@ -1,0 +1,19 @@
+<h1 style="text-align: center">
+    Rota Home
+</h1>
+
+<form #form="ngForm">
+    <app-data name="data" [(ngModel)]="data"></app-data>
+</form>
+
+<p>form is valid: {{ form.valid ? 'true' : 'false' }} - {{data}}</p>
+
+<form [formGroup]="reactiveForm">
+    <app-cpf formControlName="cpf" [(cpf)]="cpf" ngDefaultControl></app-cpf>
+</form>
+
+{{nome}} {{cpf}}
+
+<p>form is valid: {{ reactiveForm.valid ? 'true' : 'false' }}</p>
+
+<pre>{{reactiveForm.value | json}}</pre>
